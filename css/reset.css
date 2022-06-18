@@ -4,13 +4,12 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: normal;
+  color: #fff;
 }
 
-ul,
-li {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
+html {
+  font-size: 62.5%;
+  overflow: hidden;
 }
 
 a {
