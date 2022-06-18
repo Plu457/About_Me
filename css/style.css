@@ -67,3 +67,90 @@ header .contact .share a:hover {
   background: rgba(255, 255, 255, 0.5);
   color: #555;
 }
+
+/** home **/
+.container {
+  width: 80rem;
+  height: 58rem;
+  margin-left: 5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+section {
+  padding: 1rem 7%;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+.main h3 {
+  font-size: 2.5rem;
+}
+
+.main .name span {
+  font-size: 4rem;
+}
+
+.main .post {
+  padding: 1rem 0;
+}
+
+.main .post span {
+  font-size: 3rem;
+}
+
+/** Scroll Event **/
+/* https://www.youtube.com/watch?v=Kz2OgiHF9PM&list=LL&index=4 */
+.main .scroll-down {
+  z-index: 11;
+  position: absolute;
+  width: 4.2rem;
+  height: 6.4rem;
+  bottom: 8.2rem;
+  border-radius: 5rem;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid #fff;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: MoveArrow 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+  top: 85%;
+  animation-delay: 0.3s;
+}
+
+@keyframes MoveArrow {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
