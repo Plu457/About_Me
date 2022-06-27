@@ -6,8 +6,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #101010;
+  background-color: #fcfcfc;
   padding: 5.5rem;
+  visibility: hidden;
 }
 
 /** header **/
@@ -18,7 +19,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.025);
   text-align: center;
   border-radius: 1rem;
 }
@@ -28,7 +29,7 @@ header .user img {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.025);
 }
 
 header .user .name {
@@ -70,6 +71,34 @@ header .contact .share a:hover {
   color: #555;
 }
 
+header #toggle-button {
+  position: relative;
+  display: block;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 10rem;
+  background-color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+header #toggle-button .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0 4px 4px rgba(255, 255, 255, 1),
+    inset 0 -4px 4px rgba(255, 255, 255, 1);
+  transform: 0.5s;
+}
+
 /** home **/
 ::-webkit-scrollbar {
   display: none;
@@ -79,7 +108,7 @@ header .contact .share a:hover {
   width: 80rem;
   height: 58rem;
   margin-left: 5rem;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.025);
   border-radius: 1rem;
   overflow: auto;
   scroll-behavior: smooth;
@@ -209,4 +238,36 @@ section {
   height: 20rem;
   margin: 1rem;
   border-radius: 1rem;
+}
+
+/** Dark Theme **/
+body.dark {
+  background-color: #101010;
+  color: #fff;
+}
+
+header #toggle-button.dark {
+  background-color: #222;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+header #toggle-button.dark .indicator {
+  background: linear-gradient(to bottom, #444, #222);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  left: 5rem;
+}
+
+body.dark header {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark header .user img {
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0.1);
+}
+
+body.dark .container {
+  background-color: rgba(255, 255, 255, 0.1);
 }
